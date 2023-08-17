@@ -1,0 +1,4 @@
+# ocaml/dune build artifacts
+_build/
+_opam/
+
