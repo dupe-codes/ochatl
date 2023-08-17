@@ -1,0 +1,10 @@
+(executable
+ (public_name client)
+ (name main)
+ (libraries ochatl dream uri websocket lwt)
+ (preprocess
+  (pps lwt_ppx)))
+
+(env
+ (dev
+  (flags :standard -warn-error -27-32)))

@@ -1,0 +1,15 @@
+(executable
+ (public_name ochatl-server)
+ (name main)
+ (libraries ochatl dream)
+ (preprocess
+  (pps lwt_ppx)))
+
+(rule
+ (targets main.ml)
+ (deps main.eml.ml)
+ (action (run dream_eml %{deps} --workspace %{workspace_root})))
+
+(env
+ (dev
+  (flags :standard -warn-error -27-32)))
